@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body {
+            background-color: #e6e6e6;
+        }
+
+        .custom-section {
+            display: none;
+        }
+
+        div#base {
+            background-color: #e6e6e6;
+            /*background-image: url("/Content/Cover.png");
+            background-repeat: no-repeat;
+			background-size: cover;*/
+        }
+
+        div#enter {
+            position: relative;
+			float: right;
+			/*margin-right: 40%;*/
+            margin-right: 20%;
+        }
+
+        div#welcome {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        div#whatIDo {
+            padding-left: 30px;
+        }
+
+        div#companies {
+            padding-left: 30px;
+        }
+
+        div#boards {
+            padding-left: 30px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .cover-name {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: #C41C1C;
+            text-shadow: -7px 4px #fff;
+        }
+
+        .cover-text {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            color: #7B7070;
+        }
+
+        .white-back {
+			background: #ffffff;
+		}
+
+        .btn {
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn:focus, .btn:active:focus, .btn.active:focus {
+            outline: 0 none;
+        }
+
+        .btn.outline {
+    	    background: none;
+    	    padding: 12px 22px;
+        }
+
+		.btn-outline:focus {
+            color: #b30000;
+		}
+
+        .btn-outline {
+        	border: 2px solid #b30000;
+			color: #b30000;
+            background: none;
+    	    padding: 12px 22px;
+			transition: all 0.3s ease 0s;
+        }
+
+        .btn-outline:hover {
+        	color: #fff;
+			background-color: #b30000;
+        	border-color: #b30000;
+        }
+
+        .btn-round {
+        	border-radius: 24px;
+        }
+
+		.custom-nav {
+			padding-top: 14px;
+			padding-bottom: 4px;
+			background-color: rgba(220,220,220,0.95);
+		}
+
+        .nav-but {
+            margin-bottom: 10px;
+        }
+
+        .red-on {
+            color: #fff;
+			background-color: #b30000;
+        	border-color: #b30000;
+        }
+
+        .base-container {
+            padding-top: 260px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-but {
+            	border: 1px solid #b30000;
+    			color: #b30000;
+                background: none;
+        	    padding: 2px 2px;
+                margin-bottom: 0;
+                font-size: .85em;
+    			transition: all 0.3s ease 0s;
+                border-radius: 4px;
+            }
+            .custom-nav {
+    			padding-top: 4px;
+    			background-color: rgba(220,220,220,0.95);
+    		}
+            .mobile-nav {
+                padding: 0;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .base-container {
+                padding-top: 60px;
+            }
+            .mobile-nav-button {
+                text-align: center;
+                width: 24%;
+                float: left;
+                margin-left: 2px;
+            }
+            .last-nav {
+                margin-right: 2px;
+            }
+            .btn-outline:focus {
+            	color: #fff;
+    			background-color: #b30000;
+            	border-color: #b30000;
+            }
+        }
+
+    </style>
+
+    <title>Debby Meredith</title>
+
+    <meta name="Debby Meredith" content="Debby Meredith Hands-on Interim Engineering Executive, Advisor, and Board Member">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar-fixed-bottom navbar-light bg-faded custom-nav">
+            <div class="container-fluid mobile-nav">
+                <div class="row">
+                    <div class="col-md-9 col-xs-12">
+                            <a id="goto-welcome" class="mobile-nav-button nav-but navbar-toggler btn btn-round btn-outline" href="#welcome" role="button">Welcome</a>
+                            <a id="goto-wid" class="mobile-nav-button nav-but navbar-toggler btn btn-round btn-outline" href="#whatIDo" role="button">What I Do</a>
+                            <a id="goto-companies" class="mobile-nav-button nav-but navbar-toggler btn btn-round btn-outline" href="#companies" role="button">Companies</a>
+                            <a id="goto-boards" class="mobile-nav-button last-nav nav-but navbar-toggler btn btn-round btn-outline" href="#boards" role="button">Boards</a>
+                    </div>
+                    <div class="hidden-sm  hidden-xs col-md-3">
+                        <div class="nav-buttons">
+                            <h3 style="margin-left: 30px;">DebbyMeredith<small>.com</small></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="base" class="text-center">
+        <div class="base-container">
+            <div class="container-fluid">
+                <div class="cover-name">
+                    <p>Debby Meredith</p>
+                </div>
+                <div class="cover-text">
+                    <p>Hands-on Interim Engineering Executive,</p>
+                    <p>Advisor, and Board Member</p>
+                </div>
+                <button id="enter" type="button" class="btn btn-default btn-round btn-outline btn-lg">
+                <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid custom-section white-back">
+        <div id="welcome">
+		    <div class="panel-body">
+                <div class="page-header">
+                    <h1>Welcome.</h1>
+                </div>
+                <p class="lead">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="media-body">
+                                <img class="media-heading" src="Content/DebbyRedSweater.jpg" width="192" height="210" alt="Debby Meredith Photo"/>
+                            </div>
+                        </div>
+                        <div class="custom-table special-table" id="welcome-paragraph" class="col-md-10">
+                            <p class="lead">
+                                My name is Debby Meredith. I've been an entrepreneur, general manager, and venture
+							    capitalist. I love helping companies develop and scale their engineering organizations.
+						        I often take on interim  roles working directly with company founders, helping to build
+							    world-class engineering teams, architect software products, and establish processes for
+							    operational success. In addition to my consulting, board, and advisory work, I'm a
+							    <a href="http://www.iconventures.com/team/">venture partner</a> with Icon Ventures.
+							    <a href="http://www.iconventures.com">Icon Ventures</a> is a venture capital firm seeking to
+						        invest in emerging technology-based companies.
+                            </p>
+                            <p class="lead">
+                                <a href="mailto:debby@debbymeredith.com">debby@debbymeredith.com</a>
+							    <a href="http://www.linkedin.com/in/debbymeredith"><img src="Content/linkedin.png" alt="Debby Meredith" width="50" height="50" border="0" /></a>
+                            </p>
+                        </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid custom-section">
+        <div id="whatIDo">
+		    <div class="panel-body">
+                <div class="page-header" style="border-bottom: 1px solid #ccc">
+                    <h1>What I Do.</h1>
+                </div>
+                <div class="custom-table" id="services-paragraph">
+                    <p class="lead">
+                        &#8226 Serve as an Advisor, Board Member, or interim VP of Engineering, COO, or CEO<br>
+                        &#8226 Conduct strategic assessments of engineering organizations, processes, and systems<br>
+                        &#8226 Coach and mentor engineering management<br>
+                        &#8226 Design, streamline, or scale up engineering organizations and/or develop processes<br>
+                        &#8226 Recruit senior engineering talent
+                    </p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid custom-section white-back">
+        <div id="companies">
+            <div class="panel-body">
+                <div class="page-header">
+                    <h1>Companies I've Worked With.</h1>
+                </div>
+				<div class="custom-table" id="companies-paragraph">
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.responsys.com"><img src="Content/logo_responsys.gif" alt="Responsys" width="193" height="33" border="0" /></a>
+								<div>IPO; later aquired by Oracle</div></div>
+							<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.proofpoint.com"><img src="Content/logo_proofpoint.png" alt="Proofpoint" width="215" height="55" border="0" /></a>
+								<div>IPO - NASDAQ: PFPT</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.opentable.com"><img src="Content/logo_opentable.png" alt="OpenTable" width="215" height="35" border="0" /></a>
+								<div>IPO; later acquired by Priceline</div></div>
+
+
+							<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.kinsahealth.com"><img src="Content/logo_kinsa.png" alt="Kinsa" width="160" height="45" border="0" /></a></div>
+                        	<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.counsyl.com"><img src="Content/logo_counsyl.png" alt="Counsyl" width="220" height="65" border="0" /></a></div>
+                        	<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.zephyrhealth.com"><img src="Content/logo_zephyrhealth.svg" alt="Zephyr Health" width="200" height="50" border="0" /></a></div>
+
+
+                        	<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.tubularlabs.com"><img src="Content/logo_tubular.svg" alt="Tubular Labs" width="205" height="52" border="0" /></a></div>
+							<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><p><a href="http://www.opentable.com"><img src="Content/logo_ness.png" alt="Ness Computing" width="160" height="35" border="0" /></a>
+								<div>acquired by OpenTable</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.demandbase.com"><img src="Content/logo_demandbase.svg" alt="Demandbase" width="216" height="30" border="0" /></a></div>
+
+
+
+                        	<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.scripted.com"><img src="Content/logo_scripted.svg" alt="Scripted" width="210" height="60" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.area1security.com"><img src="Content/logo_area1security.png" alt="Area1 Security" width="150" height="65" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.voltage.com"><img src="Content/logo_voltage.gif" alt="Voltage Security" width="135" height="57" border="0" /></a>
+								<div>acquired by Hewlett Packard</div></div>
+
+
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.badgeville.com"><img src="Content/logo_badgeville.png" alt="Badgeville" width="230" height="50" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.returnpath.com"><img src="Content/logo_returnpath.svg" alt="ReturnPath" width="180" height="90" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.scribd.com"><img src="Content/logo_scribd.svg" alt="Scribd" width="150" height="35" border="0" /></a></div>
+
+
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.plasticjungle.com"><img src="Content/logo_plasticjungle.jpg" alt="Plastic Jungle" width="232" height="72" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.vuclip.com"><img src="Content/logo_vuclip.gif" alt="VuClip" width="208" height="47" border="0" /></a>
+                                <div>acquired by PCCW</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.efrontier.com"><img src="Content/logo_ef.jpg" alt="Efficient Frontier" width="210" height="60"border="0" /></a>
+								<div>acquired by Adobe </div></div>
+
+
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.posterous.com"><img src="Content/logo_posterous.png" width="103" height="93" alt="Posterous"/></a>
+								<div>acquired by Twitter</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.good.com"><img src="Content/logo_good.jpg" alt="Good Technology" width="95" height="95" border="0" /></a>
+								<div>acquired by Motorola/Blackberry</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.inadco.com"><img src="Content/logo_inadco.gif" alt="Inadco" width="149" height="69" border="0" /></a></div>
+
+
+							<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.kingston.com"><img src="Content/logo_ironkey.png" alt="IronKey" width="198" height="35" border="0" /></a>
+								<div>acquired by Kingston</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.moka5.com"><img src="Content/logo_mokafive.gif" alt="moka5" width="207" height="47" border="0" /></a></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.cenzic.com"><img src="Content/logo_cenzic.gif" alt="Cenzic" width="209" height="50" border="0" /></a>
+								<div>acquired by Trustwave</div></div>
+
+
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.ninthdecimal.com"><img src="Content/logo_nearbynow.gif" alt="NearbyNow" width="207" height="40" border="0" /></a>
+								<div>acquired by NinthDecimal</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.bigtent.com"><img src="Content/logo_bigtent.gif" alt="BigTent" width="180" height="43" border="0" /></a>
+							    <div>acquired by Federated Media</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.socialtext.com"><img src="Content/logo_socialtext.GIF" alt="Socialtext" width="222" height="42" border="0" /></a>
+								<div>acquired by PeopleFluent</div></div>
+
+
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.deem.com"><img src="Content/logo_ketera.gif" alt="Ketera" width="196" height="54" border="0" /></a>
+								<div>acquired by Deem</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"> <a href="http://www.friendster.com"><img src="Content/logo_friendster.gif" alt="Friendster" width="228" height="42" border="0" /></a>
+								<div>acquired by MOL Global</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.agile.com"><img src="Content/logo_onerev.gif" alt="oneREV" width="137" height="41" border="0" /></a>
+								<div>acquired by Agile/Oracle</div></div>
+
+
+							<div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.trintech.com"><img src="Content/logo_movaris.gif" alt="Movaris" width="145" height="58" border="0" /></a>
+								<div>acquired by TrinTech</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.broadcom.com"><img src="Content/logo_lvl7.gif" alt="Level 7" width="129" height="66" border="0" /></a>
+								<div>acquired by Broadcom</div></div>
+                            <div class="col-md-12 col-lg-4 text-center" style="width: 250px; height: 100px; margin-bottom: 20px;"><a href="http://www.sun.com"><img src="Content/logo_terraspring.jpg" alt="Terraspring" width="186" height="48" border="0" /></a>
+								<div>acquired by Sun/Oracle</div></div>
+
+
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid custom-section">
+        <div id="boards">
+            <div class="panel-body">
+                <div class="page-header" style="border-bottom: 1px solid #ccc">
+                    <h1>Boards I'm On.</h1>
+                </div>
+                <div class="custom-table" id="boards-paragraph">
+                    <div class="col-md-12 col-lg-4 text-center">
+                        <div style="margin-bottom: 20px;"><a href="http://www.computerhistory.org"><img src="Content/logo_CHM.png" alt="Computer History Museum" width="190" height="75" border="0" /></a></div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 text-center">
+                        <div style="margin-bottom: 20px;"><a href="http://www.karmasphere.com"><img src="Content/logo_karmasphere.png" alt="Karmasphere" width="175" height="70" border="0" /></a>
+                            <div>acquired by FICO</div></div>
+                    </div>
+                    <div class="col-md-12 col-lg-4 text-center">
+                        <div style="margin-bottom: 20px;"><a href="http://www.patientswithpower.org"><img src="Content/logo_pwp.png" alt="Patients with Power" width="180" height="75" border="0" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+			$('#base').height($(window).height());
+			$('.custom-section').height($(window).height());
+            $('.custom-table').css({
+				height: ($(window).height() * .65),
+				overflow: 'scroll'
+			});
+			$('.special-table').css({
+				height: ($(window).height() * .36),
+				overflow: 'scroll'
+			});
+
+            $("#enter").click(function(){
+                $('.custom-section').show();
+                $("nav").fadeIn();
+                $('body').animate({
+                    scrollTop: $(window).height()
+                }, 1000);
+                setTimeout(function () {
+                    $('#base').remove();
+                    $('body').scrollTop(0);
+                }, 1100);
+            });
+
+            $("#goto-welcome").click(function(event){
+                event.preventDefault();
+                $("#goto-welcome").addClass("active");
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#welcome").offset().top},
+                1000);
+            });
+
+            $("#goto-wid").click(function(event){
+                event.preventDefault();
+                $("#goto-wid").addClass("active");
+                $("#goto-welcome").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#whatIDo").offset().top},
+                1000);
+            });
+
+            $("#goto-companies").click(function(event){
+                event.preventDefault();
+                $("#goto-companies").addClass("active");
+                $("#goto-wid").removeClass('active');
+                $("#goto-boards").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#companies").offset().top},
+                1000);
+            });
+
+            $("#goto-boards").click(function(event){
+                event.preventDefault();
+                $("#goto-boards").addClass("active");
+                $("#goto-wid").removeClass('active');
+                $("#goto-welcome").removeClass('active');
+                $("#goto-companies").removeClass('active');
+                $('html, body').animate({
+                    scrollTop: $("#boards").offset().top},
+                1000);
+            });
+        });
+        </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
